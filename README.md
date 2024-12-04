@@ -1,4 +1,4 @@
-# JKFLIPFLOP-USING-IF-ELSE
+![Screenshot (95)](https://github.com/user-attachments/assets/d33c7dba-f2b7-487b-9063-b11510929831)# JKFLIPFLOP-USING-IF-ELSE
 
 **AIM:** 
 
@@ -37,12 +37,33 @@ The maximum possible groupings of adjacent ones are already shown in the figure.
 /* write all the steps invloved */
 
 **PROGRAM**
-
-/* Program for flipflops and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
+```
+/* Program for flipflops and verify its truth table in quartus using Verilog programming.
+Developed by:Reena k
+RegisterNumber:24900496
 */
+module exe_7(J,K,clk,q,qbar);
+input J,K,clk;
+output reg q;
+output reg qbar;
+initial q=0;
+initial qbar=1;
+always @(posedge clk)
+begin
+q= (J&(~q))|((~K)&q);
+qbar=~q;
+end
+endmodule
+```
 
 **RTL LOGIC FOR FLIPFLOPS**
+![Screenshot (95)](https://github.com/user-attachments/assets/b9e78f48-f497-482c-a211-e05a7a87e257)
+
 
 **TIMING DIGRAMS FOR FLIP FLOPS**
 
+![Screenshot 2024-12-04 095049](https://github.com/user-attachments/assets/15478213-e141-4be1-a4b0-8e3c008acbab)
+
+
 **RESULTS**
+The truth table are varified and  logic gate are varified.
